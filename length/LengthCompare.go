@@ -10,6 +10,11 @@ const (
 	Feet              = 12 * Inch
 )
 
-func (len Length) Meter() float64 {
-	return float64(len / Meter)
+func (l Length) Meter() float64 {
+	return float64(l / Meter)
+}
+
+func (l Length) Kilometer() float64 {
+	return float64(l / Kilometer)
+
 }

@@ -45,7 +45,7 @@ func TestComparingFeetAndCm(t *testing.T) {
 	})
 }
 
-func TestConversionLength(t *testing.T) {
+func TestConvertToMeter(t *testing.T) {
 	MyAssert := assert.New(t)
 
 	t.Run("Convert 100cm to 1m", func(t *testing.T) {
@@ -53,14 +53,34 @@ func TestConversionLength(t *testing.T) {
 		expected := 1.
 
 		convertedValue := hundredCentimeter.Meter()
-
 		MyAssert.InDelta(expected, convertedValue, 0.0001, "")
+
 	})
 	t.Run("Convert 20In to 0.508m", func(t *testing.T) {
 		twoHundredCentimeter := 20 * Inch
 		expected := 0.508
 
 		convertedValue := twoHundredCentimeter.Meter()
+
+		MyAssert.InDelta(expected, convertedValue, 0.0001, "")
+	})
+}
+func TestConvertToKilometer(t *testing.T) {
+	MyAssert := assert.New(t)
+
+	t.Run("Convert 1000m to 1Km", func(t *testing.T) {
+		hundredCentimeter := 1000 * Meter
+		expected := 1.
+
+		convertedValue := hundredCentimeter.Kilometer()
+		MyAssert.InDelta(expected, convertedValue, 0.0001, "")
+
+	})
+	t.Run("Convert 4921.26Feet to 1.5Km", func(t *testing.T) {
+		twoHundredCentimeter := 4921.26 * Feet
+		expected := 1.5
+
+		convertedValue := twoHundredCentimeter.Kilometer()
 
 		MyAssert.InDelta(expected, convertedValue, 0.0001, "")
 	})
