@@ -18,3 +18,8 @@ func (l Length) Kilometer() float64 {
 	return float64(l / Kilometer)
 
 }
+
+func (l Length) Feet() float64 {
+	return float64(l / Feet)
+
+}
