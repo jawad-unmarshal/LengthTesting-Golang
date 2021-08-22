@@ -23,3 +23,6 @@ func (l Length) Feet() float64 {
 	return float64(l / Feet)
 
 }
+func (l Length) Inch() float64 {
+	return float64(l / Inch)
+}

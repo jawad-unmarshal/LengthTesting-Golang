@@ -97,11 +97,30 @@ func TestConvertToFeet(t *testing.T) {
 
 	})
 	t.Run("Convert 12in to 1Foot", func(t *testing.T) {
-		twoHundredCentimeter := 12 * Inch
+		twelveInches := 12 * Inch
 		expected := 1.
 
-		convertedValue := twoHundredCentimeter.Feet()
+		convertedValue := twelveInches.Feet()
 
 		MyAssert.InDelta(expected, convertedValue, 0.0001, "")
+	})
+}
+func TestConvertToInch(t *testing.T) {
+	MyAssert := assert.New(t)
+
+	t.Run("Convert 3.048m to 120Inches", func(t *testing.T) {
+		threeMeter := 3.048 * Meter
+		expected := 120.
+
+		convertedValue := threeMeter.Inch()
+		MyAssert.InDelta(expected, convertedValue, 0.0009, "")
+
+	})
+	t.Run("Convert 1Km to 39370.08Inch", func(t *testing.T) {
+		oneKilometer := 1 * Kilometer
+		expected := 39370.08
+		convertedValue := oneKilometer.Inch()
+
+		MyAssert.InDelta(expected, convertedValue, 0.009, "")
 	})
 }
