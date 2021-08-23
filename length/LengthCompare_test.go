@@ -77,10 +77,10 @@ func TestConvertToKilometer(t *testing.T) {
 
 	})
 	t.Run("Convert 4921.26Feet to 1.5Km", func(t *testing.T) {
-		FeetVal := 4921.26 * Feet
+		feetVal := 4921.26 * Feet
 		expected := 1.5
 
-		convertedValue := FeetVal.Kilometer()
+		convertedValue := feetVal.Kilometer()
 
 		MyAssert.InDelta(expected, convertedValue, 0.0001, "")
 	})
@@ -93,6 +93,7 @@ func TestConvertToFeet(t *testing.T) {
 		expected := 3280.84
 
 		convertedValue := thousandMeter.Feet()
+
 		MyAssert.InDelta(expected, convertedValue, 0.0009, "")
 
 	})
@@ -113,6 +114,7 @@ func TestConvertToInch(t *testing.T) {
 		expected := 120.
 
 		convertedValue := threeMeter.Inch()
+
 		MyAssert.InDelta(expected, convertedValue, 0.0009, "")
 
 	})
