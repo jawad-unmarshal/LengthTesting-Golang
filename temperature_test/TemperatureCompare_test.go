@@ -33,9 +33,7 @@ func TestCompareTemperature(t *testing.T) {
 		var fahrenheit = temperature.NewWithFahrenheit(-279.67)
 		var kelvin = temperature.NewWithKelvin(100.)
 
-		isEqual := fahrenheit == kelvin
-
-		Assert.True(isEqual, "100K is -279.67°F")
+		Assert.InDeltaf(float64(fahrenheit), float64(kelvin), 0.0009, "100K is -279.67°F")
 
 	})
 
