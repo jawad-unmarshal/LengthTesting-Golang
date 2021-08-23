@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/jawadLengthTestingProject.iml" filepath="$PROJECT_DIR$/.idea/jawadLengthTestingProject.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/LengthTesting-Golang.iml" filepath="$PROJECT_DIR$/.idea/LengthTesting-Golang.iml" />
     </modules>
   </component>
 </project>
